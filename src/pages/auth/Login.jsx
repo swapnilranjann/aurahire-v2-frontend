@@ -26,7 +26,11 @@ const Login = () => {
 
     if (result.success) {
       toast.success('Login successful!');
-      navigate(from, { replace: true });
+      // Redirect based on actual user role from response, not checkbox state
+      const userRole = result.user?.role;
+      const redirectPath = location.state?.from?.pathname || 
+        (userRole === 'hr' ? '/hr/dashboard' : '/jobs');
+      navigate(redirectPath, { replace: true });
     } else {
       toast.error(result.error);
     }

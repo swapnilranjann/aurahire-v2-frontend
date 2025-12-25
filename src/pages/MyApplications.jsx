@@ -194,6 +194,12 @@ const MyApplications = () => {
                     >
                       View Job
                     </button>
+                    <button 
+                      className="view-details-btn"
+                      onClick={() => navigate(`/my-applications/${app.id}/details`)}
+                    >
+                      View Details
+                    </button>
                     {(!app.status || app.status === 'pending') && (
                       <button 
                         className="withdraw-btn"

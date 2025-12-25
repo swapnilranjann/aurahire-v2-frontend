@@ -36,7 +36,7 @@ const Header = () => {
 
   const navLinks = [
     { path: '/home', label: 'Home' },
-    { path: '/jobs', label: 'Find Jobs' },
+    ...(isHR ? [] : [{ path: '/jobs', label: 'Find Jobs' }]), // Hide "Find Jobs" for HR users
     { path: '/about', label: 'About Us' },
     { path: '/contact', label: 'Contact Us' },
   ];

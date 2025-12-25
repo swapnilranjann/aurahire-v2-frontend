@@ -237,7 +237,8 @@
   gap: 12px;
 }
 
-.view-job-btn {
+.view-job-btn,
+.view-details-btn {
   padding: 10px 20px;
   background: #667eea;
   color: white;

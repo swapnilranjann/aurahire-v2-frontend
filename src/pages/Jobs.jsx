@@ -23,16 +23,22 @@ const Jobs = () => {
   });
   const [applyingTo, setApplyingTo] = useState(null);
 
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated, user, isHR } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Redirect HR users to their dashboard
+    if (isHR) {
+      navigate('/hr/dashboard', { replace: true });
+      return;
+    }
+    
     fetchJobs();
     if (isAuthenticated) {
       fetchSavedJobs();
     }
     fetchFilters();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, isHR, navigate]);
 
   const fetchJobs = async (page = 1) => {
     setLoading(true);

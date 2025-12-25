@@ -22,6 +22,7 @@ const VerifyEmailNotice = lazy(() => import('../pages/auth/VerifyEmailNotice'));
 // User Pages
 const Profile = lazy(() => import('../pages/Profile'));
 const MyApplications = lazy(() => import('../pages/MyApplications'));
+const MyApplicationDetail = lazy(() => import('../pages/MyApplicationDetail'));
 const SavedJobs = lazy(() => import('../pages/SavedJobs'));
 const ResumeBuilder = lazy(() => import('../pages/ResumeBuilder'));
 const JobAlerts = lazy(() => import('../pages/JobAlerts'));
@@ -32,6 +33,8 @@ const SkillTests = lazy(() => import('../pages/SkillTests'));
 // HR Pages
 const HRDashboard = lazy(() => import('../pages/hr/Dashboard'));
 const ResumeSearch = lazy(() => import('../pages/hr/ResumeSearch'));
+const PostJob = lazy(() => import('../pages/hr/PostJob'));
+const ApplicationWorkflow = lazy(() => import('../pages/hr/ApplicationWorkflow'));
 
 // Public Pages
 const Pricing = lazy(() => import('../pages/Pricing'));
@@ -102,13 +105,16 @@ const Routers = () => {
           {/* User Protected Routes */}
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-applications" element={<MyApplications />} />
+          <Route path="/my-applications/:id/details" element={<MyApplicationDetail />} />
           <Route path="/saved-jobs" element={<SavedJobs />} />
           <Route path="/resume-builder" element={<ResumeBuilder />} />
           <Route path="/job-alerts" element={<JobAlerts />} />
 
           {/* HR Protected Routes */}
           <Route path="/hr/dashboard" element={<HRDashboard />} />
+          <Route path="/hr/post-job" element={<PostJob />} />
           <Route path="/hr/resume-search" element={<ResumeSearch />} />
+          <Route path="/hr/applications/:id/workflow" element={<ApplicationWorkflow />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

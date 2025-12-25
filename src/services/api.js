@@ -85,6 +85,10 @@ export const jobsAPI = {
   getLocations: () => api.get('/jobs/locations'),
   create: (data) => api.post('/jobs', data),
   apply: (jobId, data) => api.post(`/apply/${jobId}`, data),
+  // HR Job Management
+  getMyJobs: () => api.get('/jobs/my-jobs'),
+  update: (id, data) => api.put(`/jobs/${id}`, data),
+  delete: (id) => api.delete(`/jobs/${id}`),
 };
 
 // ============ SAVED JOBS APIs ============
@@ -99,12 +103,21 @@ export const savedJobsAPI = {
 export const applicationsAPI = {
   getMyApplications: () => api.get('/applications/my-applications'),
   getApplicationById: (id) => api.get(`/applications/my-applications/${id}`),
+  getMyApplicationWorkflow: (id) => api.get(`/applications/my-applications/${id}/workflow`),
   withdrawApplication: (id) => api.delete(`/applications/my-applications/${id}`),
   
   // HR
   getApplicants: (params) => api.get('/applications/hr/applicants', { params }),
   updateStatus: (id, data) => api.put(`/applications/hr/applicants/${id}/status`, data),
   getStats: () => api.get('/applications/hr/stats'),
+  
+  // Workflow Management
+  getWorkflow: (id) => api.get(`/applications/hr/applicants/${id}/workflow`),
+  moveToNextStage: (id, data) => api.post(`/applications/hr/applicants/${id}/next-stage`, data),
+  rejectApplication: (id, data) => api.post(`/applications/hr/applicants/${id}/reject`, data),
+  scheduleInterview: (id, data) => api.post(`/applications/hr/applicants/${id}/schedule-interview`, data),
+  completeStage: (id, data) => api.post(`/applications/hr/applicants/${id}/complete-stage`, data),
+  getWorkflowStages: () => api.get('/applications/hr/workflow-stages'),
 };
 
 // ============ PROFILE APIs ============
