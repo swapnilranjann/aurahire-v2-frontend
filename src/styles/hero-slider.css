@@ -1,0 +1,182 @@
+/* ========================================
+   Hero Slider - Naukri-Inspired Design
+   ======================================== */
+
+.hero-slider-section {
+  position: relative;
+}
+
+.hero__slider {
+  overflow: hidden;
+}
+
+.slider__item {
+  max-width: 100%;
+  height: 420px;
+  position: relative;
+  display: flex !important;
+  align-items: center;
+}
+
+.slider__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(69, 127, 202, 0.9) 0%, rgba(86, 145, 200, 0.85) 100%);
+  z-index: 1;
+}
+
+.slider__item-01 {
+  background: url("../components/assets/sl1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-02 {
+  background: url("../components/assets/sl2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-03 {
+  background: url("../components/assets/sl3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Slider Content */
+.slider__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+  max-width: 700px;
+  margin-left: 8%;
+}
+
+.slider__content h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.slider__content h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Slider Button */
+.reserve__btn {
+  display: inline-block;
+  background: #ff7555;
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.reserve__btn a {
+  display: inline-block;
+  padding: 12px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.reserve__btn:hover {
+  background: #e85a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 117, 85, 0.4);
+}
+
+.reserve__btn:hover a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Slick Dots */
+.hero__slider .slick-dots {
+  bottom: 24px;
+  z-index: 10;
+}
+
+.hero__slider .slick-dots li {
+  margin: 0 4px;
+}
+
+.hero__slider .slick-dots li button:before {
+  font-size: 10px;
+  color: white;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.hero__slider .slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+  .slider__item {
+    height: 360px;
+  }
+
+  .slider__content {
+    margin-left: 5%;
+    padding: 0 24px;
+  }
+
+  .slider__content h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider__item {
+    height: 320px;
+  }
+
+  .slider__content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .slider__content h1 {
+    font-size: 24px;
+  }
+
+  .slider__content h4 {
+    font-size: 13px;
+  }
+
+  .reserve__btn a {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .slider__item {
+    height: 280px;
+  }
+
+  .slider__content h1 {
+    font-size: 20px;
+  }
+}

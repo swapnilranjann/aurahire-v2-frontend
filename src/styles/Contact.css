@@ -1,0 +1,288 @@
+/* ========================================
+   Contact Page - Naukri-Inspired Design
+   ======================================== */
+
+.contact-us {
+  min-height: calc(100vh - 200px);
+  background: #f7f7f7;
+  padding: 0;
+}
+
+/* Hero Header */
+.contact-hero {
+  background: linear-gradient(135deg, #457fca 0%, #5691c8 100%);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.contact-us h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.contact-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 32px 0;
+}
+
+/* Main Content Wrapper */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  max-width: 1000px;
+  margin: -32px auto 0;
+  padding: 0 24px 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Contact Form */
+.contact-form {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4a90d9;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Error States */
+.contact-form input.error,
+.contact-form textarea.error {
+  border-color: #dc3545;
+  background: #fff8f8;
+}
+
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Submit Button */
+.contact-form button {
+  width: 100%;
+  padding: 14px 24px;
+  background: #4a90d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #3d7fc7;
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Messages */
+.form-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-message.success {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.form-message.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+/* Contact Info Cards */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+  border-color: #4a90d9;
+  box-shadow: 0 4px 12px rgba(74, 144, 217, 0.1);
+}
+
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  background: #e8f4fd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-card-content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.contact-card-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-card-content a {
+  color: #4a90d9;
+}
+
+.contact-card-content a:hover {
+  text-decoration: underline;
+}
+
+/* FAQ Section */
+.contact-faq {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 8px;
+}
+
+.contact-faq h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.contact-faq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-faq li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-faq li:last-child {
+  border-bottom: none;
+}
+
+.contact-faq a {
+  font-size: 14px;
+  color: #4a90d9;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .contact-info {
+    order: -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-card {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-hero {
+    padding: 36px 16px;
+  }
+
+  .contact-us h2 {
+    font-size: 24px;
+  }
+
+  .contact-wrapper {
+    padding: 0 16px 32px;
+    margin-top: -24px;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    min-width: 100%;
+  }
+}

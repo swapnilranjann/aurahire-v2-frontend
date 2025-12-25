@@ -1,0 +1,540 @@
+/* ========================================
+   Home Page Styles - Naukri-Inspired Design
+   ======================================== */
+
+/* Hero Section */
+.home-hero {
+  background: linear-gradient(135deg, #457fca 0%, #5691c8 100%);
+  padding: 48px 24px 60px;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.home-hero p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+/* Search Box */
+.search-box {
+  background: white;
+  border-radius: 40px;
+  padding: 6px;
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  padding: 14px 20px;
+  font-size: 15px;
+  outline: none;
+  border-radius: 40px;
+  background: transparent;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+.search-box button {
+  background: #ff7555;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-box button:hover {
+  background: #e85a3a;
+}
+
+/* Popular Searches */
+.popular-searches {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.popular-searches span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+.popular-searches a {
+  color: white;
+  font-size: 13px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.popular-searches a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+}
+
+/* Featured Jobs Section */
+.job-display {
+  padding: 40px 24px;
+  background: #f7f7f7;
+}
+
+.job-display h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Job Card - Naukri Style */
+.job-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  border-color: #4a90d9;
+  box-shadow: 0 4px 12px rgba(74, 144, 217, 0.15);
+}
+
+.job-card-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #4a90d9;
+  flex-shrink: 0;
+}
+
+.job-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.job-card:hover .job-title {
+  color: #4a90d9;
+}
+
+.job-company {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.job-company .rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  margin-left: 8px;
+}
+
+.job-company .rating .star {
+  color: #ffc107;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.job-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.job-meta-item .icon {
+  font-size: 14px;
+  color: #999;
+}
+
+.job-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.job-skills .skill {
+  background: #f0f7ff;
+  color: #4a90d9;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.job-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.job-posted {
+  font-size: 12px;
+  color: #999;
+}
+
+.job-location {
+  font-size: 13px;
+  color: #666;
+}
+
+/* News Articles Section */
+.news-articles {
+  padding: 40px 24px;
+  background: white;
+}
+
+.news-articles h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.news-card:hover {
+  border-color: #4a90d9;
+  background: white;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.news-summary {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.news-link {
+  color: #4a90d9;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 48px 24px;
+  background: #f5f9fd;
+}
+
+.testimonials h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #457fca 0%, #5691c8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+}
+
+.testimonial-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.testimonial-role {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.testimonial-feedback {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Video Section */
+.youtube-video {
+  padding: 48px 24px;
+  background: white;
+}
+
+.youtube-video h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Companies Section */
+.top-companies {
+  padding: 40px 24px;
+  background: #f7f7f7;
+}
+
+.top-companies h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.company-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.company-card:hover {
+  border-color: #4a90d9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.company-card .logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.company-card .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.company-card .jobs-count {
+  font-size: 12px;
+  color: #4a90d9;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .home-hero {
+    padding: 32px 16px 40px;
+  }
+
+  .home-hero h1 {
+    font-size: 24px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .search-box input {
+    border-bottom: 1px solid #e8e8e8;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .job-container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+
+  .job-display,
+  .news-articles,
+  .testimonials,
+  .youtube-video {
+    padding: 32px 16px;
+  }
+
+  .video-container iframe {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+/* Hero Slider Section - Keep minimal styling */
+.hero__slider-section {
+  background: var(--bg-light);
+}

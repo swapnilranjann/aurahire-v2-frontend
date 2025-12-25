@@ -1,0 +1,182 @@
+/* ========================================
+   About Page - Naukri-Inspired Design
+   ======================================== */
+
+.about {
+  min-height: calc(100vh - 200px);
+  background: #f7f7f7;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #457fca 0%, #5691c8 100%);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Statistics */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: -40px auto 40px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4a90d9;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Content Section */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.about-content > h1 {
+  display: none;
+}
+
+.intro {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  text-align: center;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+}
+
+.intro strong {
+  color: #4a90d9;
+}
+
+/* About Sections */
+.about-section {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.about-section:hover {
+  border-color: #4a90d9;
+  box-shadow: 0 4px 12px rgba(74, 144, 217, 0.1);
+}
+
+.about-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-section h2::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: #4a90d9;
+  border-radius: 2px;
+}
+
+.about-section p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.about-section a {
+  color: #4a90d9;
+  font-weight: 500;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-hero {
+    padding: 36px 16px;
+  }
+
+  .about-hero h1 {
+    font-size: 26px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin: -32px 16px 32px;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 20px 12px;
+  }
+
+  .stat-number {
+    font-size: 26px;
+  }
+
+  .about-content {
+    padding: 0 16px 32px;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-section h2 {
+    font-size: 16px;
+  }
+}

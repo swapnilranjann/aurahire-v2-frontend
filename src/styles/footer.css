@@ -1,0 +1,149 @@
+/* ========================================
+   Footer Styles - Naukri-Inspired Design
+   ======================================== */
+
+.footer {
+  background: #1a1a2e;
+  color: #cccccc;
+  padding: 48px 24px 24px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+
+/* Footer Logo Section */
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4a90d9;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Footer Navigation */
+.footer-nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav {
+  width: 100%;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #4a90d9;
+  text-decoration: none;
+}
+
+/* Footer Tagline */
+.footer-tagline {
+  display: none;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #333344;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright p {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a3e;
+  border-radius: 50%;
+  color: #999999;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: #4a90d9;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    padding: 32px 16px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    align-items: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
