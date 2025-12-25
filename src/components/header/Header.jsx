@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import Logo from '../common/Logo';
 import "../../styles/header.css";
-import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showJobSeekersMenu, setShowJobSeekersMenu] = useState(false);
+  const [showEmployersMenu, setShowEmployersMenu] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { isAuthenticated, user, isHR, logout } = useAuth();
@@ -32,12 +34,7 @@ const Header = () => {
     setShowUserMenu(false);
   };
 
-  const navLinks = isHR ? [
-    { path: '/home', label: 'Home' },
-    { path: '/hr/dashboard', label: 'Dashboard' },
-    { path: '/about', label: 'About Us' },
-    { path: '/contact', label: 'Contact Us' },
-  ] : [
+  const navLinks = [
     { path: '/home', label: 'Home' },
     { path: '/jobs', label: 'Find Jobs' },
     { path: '/about', label: 'About Us' },
@@ -51,8 +48,7 @@ const Header = () => {
       </a>
       <div className="header-content">
         <Link to="/home" className="logo" aria-label="AuraHire - Go to homepage">
-          <img src={logo} alt="" className="logo-image" aria-hidden="true" />
-          <span className="logo-title">AuraHire</span>
+          <Logo size="medium" showText={true} />
         </Link>
         
         <div className="tagline" aria-hidden="true">
@@ -90,6 +86,62 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            
+            {/* Job Seekers Dropdown - Only show if not HR */}
+            {!isHR && (
+              <li className="nav-dropdown">
+                <button
+                  className={`nav-link ${showJobSeekersMenu ? 'active' : ''}`}
+                  onClick={() => {
+                    setShowJobSeekersMenu(!showJobSeekersMenu);
+                    setShowEmployersMenu(false);
+                  }}
+                >
+                  Job Seekers ▼
+                </button>
+                {showJobSeekersMenu && (
+                  <div className="dropdown-menu">
+                    <Link to="/resume-builder" onClick={closeMobileMenu}>📝 Create Resume</Link>
+                    <Link to="/job-alerts" onClick={closeMobileMenu}>🔔 Job Alerts</Link>
+                    <Link to="/career-advice" onClick={closeMobileMenu}>💡 Career Advice</Link>
+                    <Link to="/skill-tests" onClick={closeMobileMenu}>📊 Skill Tests</Link>
+                  </div>
+                )}
+              </li>
+            )}
+
+            {/* Employers Dropdown - Show for everyone, but highlight HR features */}
+            <li className="nav-dropdown">
+              <button
+                className={`nav-link ${showEmployersMenu ? 'active' : ''}`}
+                onClick={() => {
+                  setShowEmployersMenu(!showEmployersMenu);
+                  setShowJobSeekersMenu(false);
+                }}
+              >
+                Employers ▼
+              </button>
+              {showEmployersMenu && (
+                <div className="dropdown-menu">
+                  {isAuthenticated && isHR ? (
+                    <>
+                      <Link to="/hr/dashboard" onClick={closeMobileMenu}>📝 Post a Job</Link>
+                      <Link to="/hr/resume-search" onClick={closeMobileMenu}>🔍 Search Resumes</Link>
+                      <Link to="/recruitment-solutions" onClick={closeMobileMenu}>💼 Recruitment Solutions</Link>
+                      <Link to="/pricing" onClick={closeMobileMenu}>💰 Pricing</Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/recruitment-solutions" onClick={closeMobileMenu}>💼 Recruitment Solutions</Link>
+                      <Link to="/pricing" onClick={closeMobileMenu}>💰 Pricing</Link>
+                      {!isAuthenticated && (
+                        <Link to="/signup" onClick={closeMobileMenu}>🚀 Get Started as Employer</Link>
+                      )}
+                    </>
+                  )}
+                </div>
+              )}
+            </li>
           </ul>
         </nav>
 
@@ -121,8 +173,11 @@ const Header = () => {
                       <Link to="/hr/dashboard" onClick={() => setShowUserMenu(false)}>
                         📊 Dashboard
                       </Link>
-                      <Link to="/hr/post-job" onClick={() => setShowUserMenu(false)}>
-                        ➕ Post a Job
+                      <Link to="/hr/resume-search" onClick={() => setShowUserMenu(false)}>
+                        🔍 Search Resumes
+                      </Link>
+                      <Link to="/pricing" onClick={() => setShowUserMenu(false)}>
+                        💰 Pricing
                       </Link>
                     </>
                   ) : (
@@ -130,11 +185,20 @@ const Header = () => {
                       <Link to="/profile" onClick={() => setShowUserMenu(false)}>
                         👤 My Profile
                       </Link>
+                      <Link to="/resume-builder" onClick={() => setShowUserMenu(false)}>
+                        📝 Create Resume
+                      </Link>
                       <Link to="/my-applications" onClick={() => setShowUserMenu(false)}>
                         📋 My Applications
                       </Link>
                       <Link to="/saved-jobs" onClick={() => setShowUserMenu(false)}>
                         ❤️ Saved Jobs
+                      </Link>
+                      <Link to="/job-alerts" onClick={() => setShowUserMenu(false)}>
+                        🔔 Job Alerts
+                      </Link>
+                      <Link to="/skill-tests" onClick={() => setShowUserMenu(false)}>
+                        📊 Skill Tests
                       </Link>
                     </>
                   )}

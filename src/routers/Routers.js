@@ -23,9 +23,19 @@ const VerifyEmailNotice = lazy(() => import('../pages/auth/VerifyEmailNotice'));
 const Profile = lazy(() => import('../pages/Profile'));
 const MyApplications = lazy(() => import('../pages/MyApplications'));
 const SavedJobs = lazy(() => import('../pages/SavedJobs'));
+const ResumeBuilder = lazy(() => import('../pages/ResumeBuilder'));
+const JobAlerts = lazy(() => import('../pages/JobAlerts'));
+const CareerAdvice = lazy(() => import('../pages/CareerAdvice'));
+const CareerAdviceDetail = lazy(() => import('../pages/CareerAdviceDetail'));
+const SkillTests = lazy(() => import('../pages/SkillTests'));
 
 // HR Pages
 const HRDashboard = lazy(() => import('../pages/hr/Dashboard'));
+const ResumeSearch = lazy(() => import('../pages/hr/ResumeSearch'));
+
+// Public Pages
+const Pricing = lazy(() => import('../pages/Pricing'));
+const RecruitmentSolutions = lazy(() => import('../pages/RecruitmentSolutions'));
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -75,6 +85,11 @@ const Routers = () => {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/career-advice" element={<CareerAdvice />} />
+          <Route path="/career-advice/:id" element={<CareerAdviceDetail />} />
+          <Route path="/skill-tests" element={<SkillTests />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/recruitment-solutions" element={<RecruitmentSolutions />} />
 
           {/* Auth Routes */}
           <Route path="/login" element={<Login />} />
@@ -88,9 +103,12 @@ const Routers = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/my-applications" element={<MyApplications />} />
           <Route path="/saved-jobs" element={<SavedJobs />} />
+          <Route path="/resume-builder" element={<ResumeBuilder />} />
+          <Route path="/job-alerts" element={<JobAlerts />} />
 
           {/* HR Protected Routes */}
           <Route path="/hr/dashboard" element={<HRDashboard />} />
+          <Route path="/hr/resume-search" element={<ResumeSearch />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

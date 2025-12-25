@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../common/Logo';
 import "../../styles/footer.css";
 
 const Footer = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
         {/* About Section */}
         <div className="footer-nav-section">
           <div className="footer-logo">
-            <span>JobPortal</span>
+            <Logo size="medium" showText={true} />
           </div>
           <p className="footer-description">
             India's leading job portal connecting talented professionals 
@@ -43,10 +44,10 @@ const Footer = () => {
           <h4 className="footer-nav-title">Job Seekers</h4>
           <nav className="footer-nav" aria-label="Job seeker links">
             <ul>
-              <li><a href="#">Create Resume</a></li>
-              <li><a href="#">Job Alerts</a></li>
-              <li><a href="#">Career Advice</a></li>
-              <li><a href="#">Skill Tests</a></li>
+              <li><Link to="/resume-builder">Create Resume</Link></li>
+              <li><Link to="/job-alerts">Job Alerts</Link></li>
+              <li><Link to="/career-advice">Career Advice</Link></li>
+              <li><Link to="/skill-tests">Skill Tests</Link></li>
             </ul>
           </nav>
         </div>
@@ -56,17 +57,17 @@ const Footer = () => {
           <h4 className="footer-nav-title">Employers</h4>
           <nav className="footer-nav" aria-label="Employer links">
             <ul>
-              <li><a href="#">Post a Job</a></li>
-              <li><a href="#">Search Resumes</a></li>
-              <li><a href="#">Recruitment Solutions</a></li>
-              <li><a href="#">Pricing</a></li>
+              <li><Link to="/hr/dashboard">Post a Job</Link></li>
+              <li><Link to="/hr/resume-search">Search Resumes</Link></li>
+              <li><Link to="/recruitment-solutions">Recruitment Solutions</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
             </ul>
           </nav>
         </div>
       </div>
       
       <div className="footer-copyright">
-        <p>© {currentYear} JobPortal. All rights reserved. | Privacy Policy | Terms of Service</p>
+        <p>© {currentYear} AuraHire. All rights reserved. | Privacy Policy | Terms of Service</p>
       </div>
     </footer>
   );

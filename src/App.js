@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './styles/theme.css';
 import { AuthProvider } from './context/AuthContext';
 import Layout from "./components/layout/Layout";
 import ErrorBoundary from './components/common/ErrorBoundary';

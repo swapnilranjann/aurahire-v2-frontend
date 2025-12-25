@@ -1,0 +1,156 @@
+.recruitment-solutions-page {
+  min-height: calc(100vh - 200px);
+  background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+  padding: 40px 20px;
+}
+
+.solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-hero {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.solutions-hero h1 {
+  font-size: 42px;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.solutions-hero p {
+  font-size: 20px;
+  color: #64748b;
+}
+
+.features-section {
+  margin-bottom: 64px;
+}
+
+.features-section h2 {
+  text-align: center;
+  color: #1e293b;
+  margin: 0 0 48px 0;
+  font-size: 32px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+.feature-icon-large {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+
+.feature-card h3 {
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  font-size: 22px;
+}
+
+.feature-card p {
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.benefits-section {
+  background: white;
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  margin-bottom: 64px;
+}
+
+.benefits-section h2 {
+  text-align: center;
+  color: #1e293b;
+  margin: 0 0 32px 0;
+  font-size: 32px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 16px;
+}
+
+.check-icon {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 64px 32px;
+  border-radius: 12px;
+  color: white;
+}
+
+.cta-section h2 {
+  margin: 0 0 12px 0;
+  font-size: 32px;
+}
+
+.cta-section p {
+  margin: 0 0 32px 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.btn-view-pricing {
+  display: inline-block;
+  padding: 16px 48px;
+  background: white;
+  color: #667eea;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-view-pricing:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recruitment-solutions-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+

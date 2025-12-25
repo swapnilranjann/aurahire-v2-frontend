@@ -1,0 +1,273 @@
+.resume-search-page {
+  min-height: calc(100vh - 200px);
+  background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+  padding: 40px 20px;
+}
+
+.resume-search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.search-header h1 {
+  font-size: 36px;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.search-filters {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  margin-bottom: 32px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-search {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-results {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+}
+
+.results-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.candidates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.candidate-card {
+  padding: 24px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.candidate-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.candidate-card-header h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.candidate-location {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.candidate-headline {
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.candidate-summary {
+  color: #64748b;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.candidate-skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.skill-badge {
+  padding: 4px 12px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.candidate-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-view-profile {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.candidate-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.btn-back {
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.candidate-profile {
+  background: white;
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+}
+
+.candidate-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.candidate-header h1 {
+  margin: 0 0 12px 0;
+  color: #1e293b;
+}
+
+.candidate-contact {
+  display: flex;
+  gap: 24px;
+  color: #64748b;
+}
+
+.candidate-section {
+  margin-bottom: 32px;
+}
+
+.candidate-section h3 {
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.experience-item,
+.education-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.experience-item h4,
+.education-item h4 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.candidate-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.btn-contact,
+.btn-download-resume {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+

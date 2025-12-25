@@ -519,4 +519,139 @@
   }
 }
 
+/* Skill Tests Tab */
+.skill-tests-tab {
+  padding: 24px;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tab-header h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.btn-take-test {
+  padding: 12px 24px;
+  background: var(--gradient-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-take-test:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+.loading-tests,
+.no-tests {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.test-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.test-result-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e2e8f0;
+}
+
+.test-result-card .test-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.test-result-card h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.score-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.score-badge.passed {
+  background: #dcfce7;
+  color: #059669;
+}
+
+.score-badge.failed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.test-result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.detail-item .label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.detail-item .value {
+  color: #1e293b;
+}
+
+.status.passed {
+  color: #059669;
+  font-weight: 600;
+}
+
+.status.failed {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.btn-retake {
+  width: 100%;
+  padding: 10px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.btn-retake:hover {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { profileAPI, uploadAPI } from '../services/api';
+import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import '../styles/Profile.css';
 
@@ -12,6 +13,8 @@ const Profile = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [editMode, setEditMode] = useState(false);
   const [tips, setTips] = useState([]);
+  const [testResults, setTestResults] = useState([]);
+  const [loadingTests, setLoadingTests] = useState(false);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -45,7 +48,20 @@ const Profile = () => {
     }
     fetchProfile();
     fetchTips();
+    fetchTestResults();
   }, [isAuthenticated, navigate]);
+
+  const fetchTestResults = async () => {
+    try {
+      setLoadingTests(true);
+      const response = await api.get('/skill-tests/results/my-tests');
+      setTestResults(response.data || []);
+    } catch (error) {
+      console.error('Error fetching test results:', error);
+    } finally {
+      setLoadingTests(false);
+    }
+  };
 
   const fetchProfile = async () => {
     try {
@@ -262,13 +278,13 @@ const Profile = () => {
       {/* Profile Tabs */}
       <div className="profile-container">
         <div className="profile-tabs">
-          {['overview', 'experience', 'education', 'skills'].map(tab => (
+          {['overview', 'experience', 'education', 'skills', 'skill-tests'].map(tab => (
             <button
               key={tab}
               className={activeTab === tab ? 'active' : ''}
               onClick={() => setActiveTab(tab)}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab === 'skill-tests' ? 'Skill Tests' : tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           ))}
         </div>
@@ -492,6 +508,64 @@ const Profile = () => {
                 />
                 <button onClick={handleAddSkill} className="add-btn">+ Add</button>
               </div>
+            </div>
+          )}
+
+          {activeTab === 'skill-tests' && (
+            <div className="skill-tests-tab">
+              <div className="tab-header">
+                <h2>Skill Test Results</h2>
+                <Link to="/skill-tests" className="btn-take-test">
+                  Take New Test
+                </Link>
+              </div>
+
+              {loadingTests ? (
+                <div className="loading-tests">Loading test results...</div>
+              ) : testResults.length === 0 ? (
+                <div className="no-tests">
+                  <p>You haven't taken any skill tests yet.</p>
+                  <Link to="/skill-tests" className="btn-take-test">
+                    Start Your First Test
+                  </Link>
+                </div>
+              ) : (
+                <div className="test-results-grid">
+                  {testResults.map((result) => (
+                    <div key={result.id} className="test-result-card">
+                      <div className="test-result-header">
+                        <h3>{result.SkillTest?.title || result.title || 'Test'}</h3>
+                        <span className={`score-badge ${result.passed ? 'passed' : 'failed'}`}>
+                          {result.score}%
+                        </span>
+                      </div>
+                      <div className="test-result-details">
+                        <div className="detail-item">
+                          <span className="label">Stack:</span>
+                          <span className="value">{result.SkillTest?.skill_name || 'N/A'}</span>
+                        </div>
+                        <div className="detail-item">
+                          <span className="label">Correct:</span>
+                          <span className="value">{result.correct_answers}/{result.total_questions}</span>
+                        </div>
+                        <div className="detail-item">
+                          <span className="label">Status:</span>
+                          <span className={`status ${result.passed ? 'passed' : 'failed'}`}>
+                            {result.passed ? '✓ Passed' : '✗ Failed'}
+                          </span>
+                        </div>
+                        <div className="detail-item">
+                          <span className="label">Date:</span>
+                          <span className="value">{new Date(result.createdAt).toLocaleDateString()}</span>
+                        </div>
+                      </div>
+                      <Link to="/skill-tests" className="btn-retake">
+                        Retake Test
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>

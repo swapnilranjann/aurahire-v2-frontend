@@ -1,0 +1,34 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .logo-svg {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.logo-text {
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+

@@ -1,0 +1,225 @@
+.career-advice-page {
+  min-height: calc(100vh - 200px);
+  background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+  padding: 40px 20px;
+}
+
+.career-advice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advice-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.advice-header h1 {
+  font-size: 36px;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.advice-header p {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.featured-section {
+  margin-bottom: 48px;
+}
+
+.featured-section h2 {
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.featured-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.featured-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+}
+
+.article-meta {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.categories-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.1);
+}
+
+.categories-filter button {
+  padding: 8px 20px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.categories-filter button.active,
+.categories-filter button:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.article-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+}
+
+.article-category {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  color: #667eea;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.article-card h3 {
+  margin: 0 0 12px 0;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.article-excerpt {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.article-detail {
+  background: white;
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.article-header {
+  margin-bottom: 32px;
+}
+
+.article-category-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.article-detail h1 {
+  font-size: 32px;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.article-meta {
+  color: #64748b;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.article-content {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.article-content p {
+  margin: 0 0 20px 0;
+}
+
+.no-articles {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.career-advice-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+}
+
